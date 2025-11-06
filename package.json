@@ -2,12 +2,13 @@
   "name": "todo_app",
   "version": "1.0.0",
   "description": "A simple Todo App backend using Node.js, Express, and MongoDB",
-  "main": "index.js",
+  "main": "backend/index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  },
+  "start": "node backend/index.js",
+  "dev": "nodemon backend/index.js"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",

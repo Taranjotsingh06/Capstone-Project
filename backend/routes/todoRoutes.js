@@ -50,4 +50,19 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// Update an existing todo
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedTodo = await Todo.findByIdAndUpdate(
+      req.params.id,
+      { title: req.body.title }, // or task if your field name is 'task'
+      { new: true }
+    );
+    res.json(updatedTodo);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+
 export default router;
